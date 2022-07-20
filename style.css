@@ -58,6 +58,12 @@ div.color {
     height: 250px;
     background-color: black;
     border-radius: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+div.color:hover {
+    transform: scale(1.1);
 }
 
 @media screen and (max-width:1024px) {

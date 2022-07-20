@@ -60,3 +60,49 @@ div.color {
     border-radius: 15px;
 }
 
+@media screen and (max-width:1024px) {
+    div.color {
+        width:200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    h1 {
+        font-size: 5.5vw;
+    }
+    h2 {
+        font-size: 4.5vw;
+    }
+
+    main {
+        height: 65vh;
+    }
+
+    div.color {
+        width:170px;
+        height: 170px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    header {
+        height: 20vh
+    }
+
+    h1 {
+        font-size: 8vw;
+    }
+    h2 {
+        font-size: 7vw;
+    }
+
+    main {
+        height: 50vh;
+    }
+
+    div.color {
+        width:140px;
+        height: 140px;
+    }
+}

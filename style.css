@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
+    font-family: 'Poppins', 'roboto', sans-serif;
 }
 
 :root {
@@ -61,7 +62,6 @@ main {
 div.color {
     width: 250px;
     height: 250px;
-    border: 1px solid black;
     border-radius: 15px;
     cursor: pointer;
     transition: 0.4s;

@@ -47,4 +47,12 @@ function checkAswer() {
     })
 }
 
+function corret() {
+    lineControler.style.backgroundColor = 'rgb(56, 228, 79)';
+}
+
+function wrong() {
+    lineControler.style.backgroundColor = 'rgb(228, 56, 56)';
+}
+
 checkAswer()

@@ -5,6 +5,7 @@ const thirdBox = document.getElementById('third-box');
 const fourthBox = document.getElementById('fourth-box');
 const fifthBox = document.getElementById('fifth-box');
 const boxToHit = document.getElementById('sixth-box');
+const lineControler = document.getElementById('controlers');
 
 let par1, par2, par3;
 
@@ -40,4 +41,10 @@ function drawColors() {
     boxToHit.style.backgroundColor = "rgb(" + drawRGB() + ")";
 }
 
+function checkAswer() {
+    document.addEventListener('click', e => {
+        return ( e.target === boxToHit ) ? corret() : wrong(); 
+    })
+}
 
+checkAswer()

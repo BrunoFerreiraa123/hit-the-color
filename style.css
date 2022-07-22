@@ -79,6 +79,13 @@ div.color:hover {
     transform: scale(1.1);
 }
 
+@media screen and (max-width:1440px) {
+    div.color {
+        width:200px;
+        height: 200px;
+    }
+}
+
 @media screen and (max-width:1024px) {
     div.color {
         width:200px;

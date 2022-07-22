@@ -91,6 +91,13 @@ div.color:hover {
         width:200px;
         height: 200px;
     }
+
+    h1 {
+        font-size: 4vw;
+    }
+    h2 {
+        font-size: 3vw;
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -103,6 +110,7 @@ div.color:hover {
 
     main {
         height: 65vh;
+        max-width: 600px;
     }
 
     div.color {
@@ -112,10 +120,6 @@ div.color:hover {
 }
 
 @media screen and (max-width:425px) {
-    header {
-        height: 20vh
-    }
-
     h1 {
         font-size: 8vw;
     }
@@ -124,11 +128,11 @@ div.color:hover {
     }
 
     main {
-        height: 50vh;
+        height: 40vh;
     }
 
     div.color {
-        width:140px;
-        height: 140px;
+        width:120px;
+        height: 120px;
     }
 }

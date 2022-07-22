@@ -136,3 +136,10 @@ div.color:hover {
         height: 120px;
     }
 }
+
+@media screen and (max-width:425px) {
+    div.color {
+        width:100px;
+        height: 100px;
+    }
+ }

@@ -1,16 +1,21 @@
 const title = document.getElementById('color');
+const restart = document.getElementById('restart');
+
 const firstBox = document.getElementById('first-box');
 const secondBox = document.getElementById('second-box');
 const thirdBox = document.getElementById('third-box');
 const fourthBox = document.getElementById('fourth-box');
 const fifthBox = document.getElementById('fifth-box');
-const boxToHit = document.getElementById('sixth-box');
+const sixthBox = document.getElementById('sixth-box');
+
 const lineControler = document.getElementById('controlers');
+const arrCards = [firstBox, secondBox, thirdBox, fourthBox, fifthBox, sixthBox]
 
 let par1, par2, par3;
 
 window.onload = () => {
     drawColors();
+    checkAswer()
 };
 
 function drawRGB() {
@@ -28,8 +33,7 @@ function drawRGB() {
 }
 
 function TitleColor(parameter) {
-    title.innerText = `RGB(${parameter[0]}, ${parameter[1]}, ${parameter[2]})`; 
-
+    title.innerText = `RGB(${parameter[0]}, ${parameter[1]}, ${parameter[2]})`;
 }
 
 function drawColors() {
@@ -38,21 +42,21 @@ function drawColors() {
     thirdBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
     fourthBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
     fifthBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
-    boxToHit.style.backgroundColor = "rgb(" + drawRGB() + ")";
+    sixthBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
 }
 
 function checkAswer() {
     document.addEventListener('click', e => {
-        return ( e.target === boxToHit ) ? corret() : wrong(); 
+        if (e.target === firstBox || e.target === secondBox || e.target === thirdBox || e.target === fourthBox || e.target === fifthBox || e.target === sixthBox) {
+            if(e.target === sixthBox) {
+                corret()
+            }
+            else {
+                wrong()
+            }
+        } else {
+            return;
+        }
     })
 }
 
-function corret() {
-    lineControler.style.backgroundColor = 'rgb(56, 228, 79)';
-}
-
-function wrong() {
-    lineControler.style.backgroundColor = 'rgb(228, 56, 56)';
-}
-
-checkAswer()

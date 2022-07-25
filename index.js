@@ -36,6 +36,13 @@ function drawRGB() {
     return valuesFormated;
 }
 
+(function drawPositions() {
+    for (let i = 0; i < arrCards.length; i++) {
+        let ramdomPos = Math.floor(Math.random() * 7);
+        arrCards[i].style.order = ramdomPos;
+    }
+})();
+
 function TitleColor(parameter) {
     title.innerText = `RGB(${parameter[0]}, ${parameter[1]}, ${parameter[2]})`;
 }

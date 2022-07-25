@@ -71,3 +71,15 @@ function checkAswer() {
     })
 }
 
+function corret() {
+    lineControler.style.backgroundColor = 'rgb(56, 228, 79)';
+    document.getElementById('modal').style.display = 'flex'
+    restart.style.backgroundColor = "rgb(240,240,240)";
+    restart.style.color = "rgb(56,228,56)";
+}
+
+function wrong() {
+    lineControler.style.backgroundColor = 'rgb(228, 56, 56)';
+    restart.style.backgroundColor = "rgb(240,240,240)";
+    restart.style.color = "rgb(228,56,56)";
+}

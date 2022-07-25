@@ -18,6 +18,10 @@ window.onload = () => {
     checkAswer()
 };
 
+restart.addEventListener('click', () => {
+        location.reload()
+    })
+
 function drawRGB() {
     let rgbArray = [par1, par2, par3];
 

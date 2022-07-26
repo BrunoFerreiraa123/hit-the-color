@@ -78,6 +78,19 @@ div.controlers {
     align-items: center;
 }
 
+button.restart {
+    width: 150px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: none;
+    transition: .2s;
+}
+
 main {
     width: 100vw;
     height: 55vh;

@@ -91,6 +91,10 @@ button.restart {
     transition: .2s;
 }
 
+button.restart:hover {
+    transform: scale(1.1);
+}
+
 main {
     width: 100vw;
     height: 55vh;

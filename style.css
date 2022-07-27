@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 16px;
     font-family: 'Poppins', 'roboto', sans-serif;
 }
 
@@ -14,7 +13,6 @@
 }
 
 body {
-    width: 100vw;
     height: 100vh;
     background-color: var(--bg-color);
     display: flex;
@@ -37,7 +35,7 @@ section.modal {
     align-items: center;
 }
 
-.modal h3 {
+.modal h2 {
     color: aliceblue;
     font-size: 25px;
 }
@@ -52,12 +50,10 @@ header {
 }
 
 div.title {
-    max-width: 1000px;
     display: flex;
-    flex-wrap: wrap;   
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-flow: column wrap;
 }
 
 h1 {
@@ -71,7 +67,7 @@ h2 {
 }
 
 div.controlers {
-    width:100%;
+    width:100vw;
     height: 50px;
     background-color: rgb(240, 240, 240);
     display:flex;
@@ -87,7 +83,6 @@ button.restart {
     border-radius: 10px;
     cursor: pointer;
     font-size: 20px;
-    text-transform: uppercase;
     border: none;
     transition: .2s;
 }
@@ -114,7 +109,6 @@ div.color {
     box-shadow: 4px 4px 12px 2px #000000;
     cursor: pointer;
     transition: 0.4s;
-    display: flex;
 }
 
 div.color:hover {
@@ -129,11 +123,6 @@ div.color:hover {
 }
 
 @media screen and (max-width:1024px) {
-    div.color {
-        width:200px;
-        height: 200px;
-    }
-
     h1 {
         font-size: 4vw;
     }
@@ -144,14 +133,14 @@ div.color:hover {
 
 @media screen and (max-width:768px) {
     h1 {
-        font-size: 5.5vw;
+        font-size: 4.5vw;
     }
     h2 {
-        font-size: 4.5vw;
+        font-size: 3.5vw;
     }
 
     main {
-        height: 65vh;
+        height: 50vh;
         max-width: 600px;
     }
 
@@ -170,24 +159,19 @@ div.color:hover {
     }
 
     main {
-        height: 40vh;
+        height: 50vh;
+        gap: 10px;
     }
 
     div.color {
-        width:120px;
-        height: 120px;
+        width: 130px;
+        height: 130px;
     }
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:375px) {
     div.color {
-        width:100px;
-        height: 100px;
-    }
- }
-
- @media screen and (max-width:300px) {
-    main {
-        margin-bottom: 80px;
+        width:110px;
+        height: 110px;
     }
  }

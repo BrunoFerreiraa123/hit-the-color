@@ -185,3 +185,9 @@ div.color:hover {
         height: 100px;
     }
  }
+
+ @media screen and (max-width:300px) {
+    main {
+        margin-bottom: 80px;
+    }
+ }

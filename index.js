@@ -1,3 +1,4 @@
+const header = document.getElementsByTagName('header')[0];
 const title = document.getElementById('color');
 const restart = document.getElementById('restart');
 
@@ -16,7 +17,7 @@ let par1, par2, par3;
 window.onload = () => {
     drawColors();
     checkAswer()
-};
+}
 
 restart.addEventListener('click', () => {
         location.reload()

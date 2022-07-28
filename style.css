@@ -8,6 +8,7 @@
 :root {
     --primary-color: #FFCAB1;
     --bg-color: #69A2B0;
+    --title-color: #424242;
     --color-corret: rgb(56, 228, 79);
     --color-wrogn:: rgb(228, 56, 56);
 }
@@ -46,7 +47,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px
+    gap: 10px;
+    color: var(--title-color);
 }
 
 div.title {

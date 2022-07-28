@@ -1,5 +1,6 @@
 const header = document.getElementsByTagName('header')[0];
 const body = document.getElementsByTagName('body')[0];
+const main = document.getElementsByTagName('main')[0];
 
 const title = document.getElementById('color');
 const restart = document.getElementById('restart');
@@ -85,7 +86,9 @@ function targetCheck(e) {
 function corret() {
     lineControler.style.backgroundColor = 'rgb(56, 228, 79)';
     body.style.backgroundColor = sixthBox.style.backgroundColor;
-    document.getElementById('modal').style.display = 'flex'
+    main.style.pointerEvents = 'none';
+
+    document.getElementById('modal').style.display = 'flex';
     restart.style.backgroundColor = "rgb(240,240,240)";
     restart.style.color = "rgb(56,228,56)";
 }

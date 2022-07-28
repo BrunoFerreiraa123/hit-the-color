@@ -61,7 +61,7 @@ function drawColors() {
 
 function checkAswer() {
     document.addEventListener('click', e => {
-        if (e.target === firstBox || e.target === secondBox || e.target === thirdBox || e.target === fourthBox || e.target === fifthBox || e.target === sixthBox) {
+        if (targetCheck(e)) {
             if(e.target === sixthBox) {
                 corret()
             }
@@ -72,6 +72,14 @@ function checkAswer() {
             return;
         }
     })
+}
+
+function targetCheck(e) {
+    return (e.target === firstBox || e.target === secondBox ||
+            e.target === thirdBox || e.target === fourthBox || 
+            e.target === fifthBox || e.target === sixthBox) 
+            ? true : false ;
+
 }
 
 function corret() {

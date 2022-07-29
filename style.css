@@ -10,7 +10,7 @@
     --bg-color: #69A2B0;
     --title-color: #424242;
     --color-corret: rgb(56, 228, 79);
-    --color-wrogn: : rgb(228, 56, 56);
+    --color-wrogn:: rgb(228, 56, 56);
 }
 
 body {
@@ -23,22 +23,45 @@ body {
 }
 
 section.modal {
-    width: 300px;
-    height: 100px;
+    width: 400px;
+    padding: 40px;
     background-color: var(--color-corret);
     border-radius: 20px;
-    position: absolute;
+    position:absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left:50%;
+    transform: translate(-50%,-50%);
     display: none;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 20px
 }
 
 .modal h2 {
     color: aliceblue;
     font-size: 25px;
+}
+
+.modal h3 {
+    color: aliceblue;
+    font-size: 25px;
+    display: flex;
+}
+
+.modal button {
+    padding: 10px;
+    background-color: aliceblue;
+    color: var(--color-corret);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    transition: .2s;
+}
+
+.modal button:hover {
+    transform: scale(1.1);
 }
 
 header {
@@ -69,10 +92,10 @@ h2 {
 }
 
 div.controlers {
-    width: 100vw;
+    width:100vw;
     height: 50px;
     background-color: rgb(240, 240, 240);
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
 }
@@ -119,7 +142,7 @@ div.color:hover {
 
 @media screen and (max-width:1440px) {
     div.color {
-        width: 200px;
+        width:200px;
         height: 200px;
     }
 }
@@ -128,7 +151,6 @@ div.color:hover {
     h1 {
         font-size: 4vw;
     }
-
     h2 {
         font-size: 3vw;
     }
@@ -138,7 +160,6 @@ div.color:hover {
     h1 {
         font-size: 4.5vw;
     }
-
     h2 {
         font-size: 3.5vw;
     }
@@ -149,7 +170,7 @@ div.color:hover {
     }
 
     div.color {
-        width: 170px;
+        width:170px;
         height: 170px;
     }
 }
@@ -164,13 +185,12 @@ div.color:hover {
         width: 135px;
         height: 135px;
     }
-}
+ }
 
 @media screen and (max-width:425px) {
     h1 {
         font-size: 8vw;
     }
-
     h2 {
         font-size: 7vw;
     }
@@ -195,9 +215,9 @@ div.color:hover {
         width: 100px;
         height: 100px;
     }
-}
+ }
 
-@media screen and (max-width:340px) {
+ @media screen and (max-width:340px) {
     main {
         height: 40vh;
         gap: 5px;
@@ -207,4 +227,16 @@ div.color:hover {
         width: 100px;
         height: 100px;
     }
-}
+ }
+
+ @media screen and (max-width:320px) {
+    main {
+        height: 50vh;
+        gap: 15px;
+    }
+
+    div.color {
+        width: 115px;
+        height: 115px;
+    }
+ }

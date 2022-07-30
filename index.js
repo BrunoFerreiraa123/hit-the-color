@@ -91,11 +91,11 @@ function targetCheck(e) {
             e.target === thirdBox || e.target === fourthBox || 
             e.target === fifthBox || e.target === sixthBox) 
             ? true : false ;
-
 }
 
 function corret() {
     acertos.push('acertou')
+    showAcertos();
     lineControler.style.backgroundColor = 'rgb(56, 228, 79)';
     body.style.backgroundColor = sixthBox.style.backgroundColor;
     main.style.pointerEvents = 'none';
@@ -110,4 +110,9 @@ function wrong() {
     lineControler.style.backgroundColor = 'rgb(228, 56, 56)';
     restart.style.backgroundColor = "rgb(240,240,240)";
     restart.style.color = "rgb(228,56,56)";
+}
+
+function showAcertos() {
+    document.getElementById('acertos').
+    innerText = acertos.length;
 }

@@ -173,6 +173,11 @@ div.color:hover {
         width:170px;
         height: 170px;
     }
+    
+    section.modal {
+        width:400px;
+        padding: 20px;
+    }
 }
 
 @media screen and (max-width:575px) {
@@ -203,6 +208,13 @@ div.color:hover {
     div.color {
         width: 120px;
         height: 120px;
+    }
+
+    section.modal {
+        width:300px
+    }
+    .modal h2, .modal h3 {
+        font-size: 20px;
     }
 }
 
@@ -238,5 +250,14 @@ div.color:hover {
     div.color {
         width: 115px;
         height: 115px;
+    }
+
+    section.modal {
+        width: 250px;
+    }
+
+    section.modal button {
+        padding:5px;
+        font-size: 18px;
     }
  }

@@ -108,7 +108,8 @@ function corret() {
 }
 
 function wrong() {
-    erros.push('errou')
+    erros.push('errou');
+    showErros();
     lineControler.style.backgroundColor = 'rgb(228, 56, 56)';
     restart.style.backgroundColor = "rgb(240,240,240)";
     restart.style.color = "rgb(228,56,56)";
@@ -117,4 +118,9 @@ function wrong() {
 function showAcertos() {
     document.getElementById('acertos').
         innerText = ` ${acertos.length}`;
+}
+
+function showErros() {
+    document.getElementById('erros').
+        innerText = ` ${erros.length}`;
 }

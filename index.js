@@ -116,5 +116,5 @@ function wrong() {
 
 function showAcertos() {
     document.getElementById('acertos').
-        innerText = acertos.length;
+        innerText = ` ${acertos.length}`;
 }

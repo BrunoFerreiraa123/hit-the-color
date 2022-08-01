@@ -22,19 +22,21 @@ let erros = [];
 
 window.onload = () => {
     drawColors();
+    drawPositions();
     checkAswer()
 }
 
 restart.addEventListener('click', () => {
-        location.reload()
-    })
+    location.reload()
+})
 
 document.getElementById('button-modal').addEventListener('click', () => {
     modal.style.display = "none";
-    drawColors();
     main.style.pointerEvents = 'auto';
     body.style.backgroundColor = '#69A2B0'
     lineControler.backgroundColor = 'rgb(240, 240, 240)'
+    drawColors();
+    drawPositions();
 })
 
 function drawRGB() {
@@ -51,12 +53,12 @@ function drawRGB() {
     return valuesFormated;
 }
 
-(function drawPositions() {
+function drawPositions() {
     for (let i = 0; i < arrCards.length; i++) {
         let ramdomPos = Math.floor(Math.random() * 7);
         arrCards[i].style.order = ramdomPos;
     }
-})();
+}
 
 function TitleColor(parameter) {
     title.innerText = `RGB(${parameter[0]}, ${parameter[1]}, ${parameter[2]})`;
@@ -74,7 +76,7 @@ function drawColors() {
 function checkAswer() {
     document.addEventListener('click', e => {
         if (targetCheck(e)) {
-            if(e.target === sixthBox) {
+            if (e.target === sixthBox) {
                 corret()
             }
             else {
@@ -88,9 +90,9 @@ function checkAswer() {
 
 function targetCheck(e) {
     return (e.target === firstBox || e.target === secondBox ||
-            e.target === thirdBox || e.target === fourthBox || 
-            e.target === fifthBox || e.target === sixthBox) 
-            ? true : false ;
+        e.target === thirdBox || e.target === fourthBox ||
+        e.target === fifthBox || e.target === sixthBox)
+        ? true : false;
 }
 
 function corret() {
@@ -114,5 +116,5 @@ function wrong() {
 
 function showAcertos() {
     document.getElementById('acertos').
-    innerText = acertos.length;
+        innerText = acertos.length;
 }

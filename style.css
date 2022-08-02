@@ -10,7 +10,6 @@
     --bg-color: #69A2B0;
     --title-color: #424242;
     --color-corret: rgb(56, 228, 79);
-    --color-wrogn:: rgb(228, 56, 56);
 }
 
 body {
@@ -26,7 +25,7 @@ section.modal {
     width: 400px;
     padding: 40px;
     background-color: var(--color-corret);
-    border-radius: 20px;
+    border-radius: 10px;
     position:absolute;
     top: 50%;
     left:50%;

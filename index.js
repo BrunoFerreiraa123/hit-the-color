@@ -31,10 +31,7 @@ restart.addEventListener('click', () => {
 })
 
 document.getElementById('button-modal').addEventListener('click', () => {
-    modal.style.display = "none";
-    main.style.pointerEvents = 'auto';
-    body.style.backgroundColor = '#69A2B0'
-    lineControler.backgroundColor = 'rgb(240, 240, 240)'
+    resetStyles();
     drawColors();
     drawPositions();
 })
@@ -43,11 +40,10 @@ function drawRGB() {
     let rgbArray = [par1, par2, par3];
 
     for (let i = 0; i < 3; i++) {
-        rgbArray[i] = Math.floor(Math.random() * 256)
+        rgbArray[i] = Math.floor(Math.random() * 256);
     }
 
     TitleColor(rgbArray);
-
     let valuesFormated = rgbArray.join(',');
 
     return valuesFormated;
@@ -76,6 +72,7 @@ function drawColors() {
 function checkAswer() {
     document.addEventListener('click', e => {
         if (targetCheck(e)) {
+            lineControler.style.backgroundColor = "rgb(240, 240, 240)"
             if (e.target === sixthBox) {
                 corret()
             }
@@ -123,4 +120,13 @@ function showAcertos() {
 function showErros() {
     document.getElementById('erros').
         innerText = ` ${erros.length}`;
+}
+
+function resetStyles() {
+    lineControler.style.backgroundColor = "rgb(240, 240, 240)";
+    modal.style.display = "none";
+    main.style.pointerEvents = 'auto';
+    body.style.backgroundColor = '#69A2B0'
+    restart.style.color = "#69A2B0";
+    restart.style.backgroundColor = "#FFCAB1";
 }

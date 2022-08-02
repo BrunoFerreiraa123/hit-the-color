@@ -21,6 +21,18 @@ body {
     overflow: hidden;
 }
 
+* button {
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: .2s;
+    font-size: 20px
+}
+
+* button:hover {
+    transform: scale(1.1);
+}
+
 section.modal {
     width: 400px;
     padding: 40px;
@@ -30,21 +42,20 @@ section.modal {
     top: 50%;
     left:50%;
     transform: translate(-50%,-50%);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px
+    gap: 20px;
+    font-size: 25px;
 }
 
 .modal h2 {
     color: aliceblue;
-    font-size: 25px;
 }
 
 .modal h3 {
     color: aliceblue;
-    font-size: 25px;
     display: flex;
 }
 
@@ -52,15 +63,6 @@ section.modal {
     padding: 10px;
     background-color: aliceblue;
     color: var(--color-corret);
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    border: none;
-    transition: .2s;
-}
-
-.modal button:hover {
-    transform: scale(1.1);
 }
 
 header {
@@ -104,15 +106,6 @@ button.restart {
     height: 40px;
     background-color: var(--primary-color);
     color: var(--bg-color);
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    border: none;
-    transition: .2s;
-}
-
-button.restart:hover {
-    transform: scale(1.1);
 }
 
 main {

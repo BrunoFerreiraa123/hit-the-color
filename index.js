@@ -77,7 +77,9 @@ function checkAswer() {
                 corret()
             }
             else {
-                wrong()
+                resetStyles();
+                setTimeout(wrong, 300)
+                
             }
         } else {
             return;

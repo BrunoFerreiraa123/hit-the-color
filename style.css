@@ -29,7 +29,7 @@ body {
     font-size: 20px
 }
 
-* button:hover {
+* button:hover, div.color:hover  {
     transform: scale(1.1);
 }
 
@@ -126,10 +126,6 @@ div.color {
     box-shadow: 4px 4px 12px 2px #000000;
     cursor: pointer;
     transition: 0.4s;
-}
-
-div.color:hover {
-    transform: scale(1.1);
 }
 
 @media screen and (max-width:1440px) {

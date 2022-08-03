@@ -1,17 +1,11 @@
 import { drawColors, drawPositions } from "./modules/draw.js";
+import arrCards from "./modules/cardsArray.js";
 
 const body = document.getElementsByTagName('body')[0];
 const main = document.getElementsByTagName('main')[0];
 const modal = document.getElementById('modal');
 
 const restart = document.getElementById('restart');
-
-const firstBox = document.getElementById('first-box');
-const secondBox = document.getElementById('second-box');
-const thirdBox = document.getElementById('third-box');
-const fourthBox = document.getElementById('fourth-box');
-const fifthBox = document.getElementById('fifth-box');
-const sixthBox = document.getElementById('sixth-box');
 
 const lineControler = document.getElementById('controlers');
 
@@ -38,13 +32,12 @@ function checkAswer() {
     document.addEventListener('click', e => {
         if (targetCheck(e)) {
             lineControler.style.backgroundColor = "rgb(240, 240, 240)"
-            if (e.target === sixthBox) {
+            if (e.target === arrCards[5]) {
                 corret()
             }
             else {
                 resetStyles();
                 setTimeout(wrong, 300)
-                
             }
         } else {
             return;
@@ -53,17 +46,17 @@ function checkAswer() {
 }
 
 function targetCheck(e) {
-    return (e.target === firstBox || e.target === secondBox ||
-        e.target === thirdBox || e.target === fourthBox ||
-        e.target === fifthBox || e.target === sixthBox)
-        ? true : false;
+    return (e.target === arrCards[0] || e.target === arrCards[1] ||
+            e.target === arrCards[2] || e.target === arrCards[3] ||
+            e.target === arrCards[4] || e.target === arrCards[5])
+            ? true : false;
 }
 
 function corret() {
     acertos.push('acertou')
     showAcertos();
     lineControler.style.backgroundColor = 'rgb(56, 228, 79)';
-    body.style.backgroundColor = sixthBox.style.backgroundColor;
+    body.style.backgroundColor = arrCards[5].style.backgroundColor;
     main.style.pointerEvents = 'none';
 
     modal.style.display = 'flex';

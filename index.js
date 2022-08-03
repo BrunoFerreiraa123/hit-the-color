@@ -1,3 +1,5 @@
+"use strict";
+
 const header = document.getElementsByTagName('header')[0];
 const body = document.getElementsByTagName('body')[0];
 const main = document.getElementsByTagName('main')[0];
@@ -16,7 +18,6 @@ const sixthBox = document.getElementById('sixth-box');
 const lineControler = document.getElementById('controlers');
 const arrCards = [firstBox, secondBox, thirdBox, fourthBox, fifthBox, sixthBox]
 
-let par1, par2, par3;
 let acertos = [];
 let erros = [];
 
@@ -37,6 +38,7 @@ document.getElementById('button-modal').addEventListener('click', () => {
 })
 
 function drawRGB() {
+    let par1, par2, par3;
     let rgbArray = [par1, par2, par3];
 
     for (let i = 0; i < 3; i++) {

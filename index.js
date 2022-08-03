@@ -1,11 +1,9 @@
-"use strict";
+import { drawColors, drawPositions } from "./modules/draw.js";
 
-const header = document.getElementsByTagName('header')[0];
 const body = document.getElementsByTagName('body')[0];
 const main = document.getElementsByTagName('main')[0];
 const modal = document.getElementById('modal');
 
-const title = document.getElementById('color');
 const restart = document.getElementById('restart');
 
 const firstBox = document.getElementById('first-box');
@@ -16,7 +14,6 @@ const fifthBox = document.getElementById('fifth-box');
 const sixthBox = document.getElementById('sixth-box');
 
 const lineControler = document.getElementById('controlers');
-const arrCards = [firstBox, secondBox, thirdBox, fourthBox, fifthBox, sixthBox]
 
 let acertos = [];
 let erros = [];
@@ -29,47 +26,13 @@ window.onload = () => {
 
 restart.addEventListener('click', () => {
     location.reload()
-})
+});
 
 document.getElementById('button-modal').addEventListener('click', () => {
     resetStyles();
     drawColors();
     drawPositions();
-})
-
-function drawRGB() {
-    let par1, par2, par3;
-    let rgbArray = [par1, par2, par3];
-
-    for (let i = 0; i < 3; i++) {
-        rgbArray[i] = Math.floor(Math.random() * 256);
-    }
-
-    TitleColor(rgbArray);
-    let valuesFormated = rgbArray.join(',');
-
-    return valuesFormated;
-}
-
-function drawPositions() {
-    for (let i = 0; i < arrCards.length; i++) {
-        let ramdomPos = Math.floor(Math.random() * 7);
-        arrCards[i].style.order = ramdomPos;
-    }
-}
-
-function TitleColor(parameter) {
-    title.innerText = `RGB(${parameter[0]}, ${parameter[1]}, ${parameter[2]})`;
-}
-
-function drawColors() {
-    firstBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
-    secondBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
-    thirdBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
-    fourthBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
-    fifthBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
-    sixthBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
-}
+});
 
 function checkAswer() {
     document.addEventListener('click', e => {

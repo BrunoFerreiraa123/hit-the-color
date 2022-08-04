@@ -1,13 +1,6 @@
-const firstBox = document.getElementById('first-box');
-const secondBox = document.getElementById('second-box');
-const thirdBox = document.getElementById('third-box');
-const fourthBox = document.getElementById('fourth-box');
-const fifthBox = document.getElementById('fifth-box');
-const sixthBox = document.getElementById('sixth-box');
+import arrCards from "./cardsArray.js";
 
 const title = document.getElementById('color');
-
-const arrCards = [firstBox, secondBox, thirdBox, fourthBox, fifthBox, sixthBox];
 
 function drawRGB() {
     let par1, par2, par3;
@@ -35,12 +28,12 @@ function TitleColor(parameter) {
 }
 
 function drawColors() {
-    firstBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
-    secondBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
-    thirdBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
-    fourthBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
-    fifthBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
-    sixthBox.style.backgroundColor = "rgb(" + drawRGB() + ")";
+    arrCards[0].style.backgroundColor = "rgb(" + drawRGB() + ")";
+    arrCards[1].style.backgroundColor = "rgb(" + drawRGB() + ")";
+    arrCards[2].style.backgroundColor = "rgb(" + drawRGB() + ")";
+    arrCards[3].style.backgroundColor = "rgb(" + drawRGB() + ")";
+    arrCards[4].style.backgroundColor = "rgb(" + drawRGB() + ")";
+    arrCards[5].style.backgroundColor = "rgb(" + drawRGB() + ")";
 }
 
 export {drawColors, drawPositions};

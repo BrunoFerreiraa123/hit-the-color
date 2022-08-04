@@ -1,5 +1,6 @@
 import { drawColors, drawPositions } from "./modules/draw.js";
 import checkAswer from "./modules/checkClick.js";
+import { resetStyles } from "./modules/printAswer.js";
 
 const restart = document.getElementById('restart');
 

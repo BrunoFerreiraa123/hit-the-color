@@ -1,16 +1,7 @@
 import { drawColors, drawPositions } from "./modules/draw.js";
-import arrCards from "./modules/cardsArray.js";
-
-const body = document.getElementsByTagName('body')[0];
-const main = document.getElementsByTagName('main')[0];
-const modal = document.getElementById('modal');
+import checkAswer from "./modules/checkClick.js";
 
 const restart = document.getElementById('restart');
-
-const lineControler = document.getElementById('controlers');
-
-let acertos = [];
-let erros = [];
 
 window.onload = () => {
     drawColors();
@@ -27,66 +18,3 @@ document.getElementById('button-modal').addEventListener('click', () => {
     drawColors();
     drawPositions();
 });
-
-function checkAswer() {
-    document.addEventListener('click', e => {
-        if (targetCheck(e)) {
-            lineControler.style.backgroundColor = "rgb(240, 240, 240)"
-            if (e.target === arrCards[5]) {
-                corret()
-            }
-            else {
-                resetStyles();
-                setTimeout(wrong, 300)
-            }
-        } else {
-            return;
-        }
-    })
-}
-
-function targetCheck(e) {
-    return (e.target === arrCards[0] || e.target === arrCards[1] ||
-            e.target === arrCards[2] || e.target === arrCards[3] ||
-            e.target === arrCards[4] || e.target === arrCards[5])
-            ? true : false;
-}
-
-function corret() {
-    acertos.push('acertou')
-    showAcertos();
-    lineControler.style.backgroundColor = 'rgb(56, 228, 79)';
-    body.style.backgroundColor = arrCards[5].style.backgroundColor;
-    main.style.pointerEvents = 'none';
-
-    modal.style.display = 'flex';
-    restart.style.backgroundColor = "rgb(240,240,240)";
-    restart.style.color = "rgb(56,228,56)";
-}
-
-function wrong() {
-    erros.push('errou');
-    showErros();
-    lineControler.style.backgroundColor = 'rgb(228, 56, 56)';
-    restart.style.backgroundColor = "rgb(240,240,240)";
-    restart.style.color = "rgb(228,56,56)";
-}
-
-function showAcertos() {
-    document.getElementById('acertos').
-        innerText = ` ${acertos.length}`;
-}
-
-function showErros() {
-    document.getElementById('erros').
-        innerText = ` ${erros.length}`;
-}
-
-function resetStyles() {
-    lineControler.style.backgroundColor = "rgb(240, 240, 240)";
-    modal.style.display = "none";
-    main.style.pointerEvents = 'auto';
-    body.style.backgroundColor = '#69A2B0'
-    restart.style.color = "#69A2B0";
-    restart.style.backgroundColor = "#FFCAB1";
-}

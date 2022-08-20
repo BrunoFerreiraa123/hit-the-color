@@ -5,6 +5,8 @@
 <h2>:grey_exclamation: Sobre</h2>
 <p>Jogo de adivinhação de cores onde o usuário recebe um RGB e seis cores onde o objetivo é acertar a cor correta.</p>
 
+![](gif-hit-the-color.gif)
+
 <h2>:hammer: Ferramentas</h2>
 
 <p>Projeto construído 100% com <a href="http://vanilla-js.com/">VanillaJS.</a></p>
